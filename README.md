@@ -1,47 +1,63 @@
-# Arquitetura-de-Computadores-I
-AC1_Inspiração (ou nome do seu projeto)
-Sobre o Projeto
+![GIF de Arquitetura de Computadores](https://cdnb.artstation.com/p/assets/images/images/035/754/567/large/augusto-0augusto-pixel-art-computer.gif?1613035326)
 
-Objetivo
-Breve descrição do propósito deste repositório. Por exemplo: centralizar materiais e ferramentas para a disciplina Arquitetura de Computadores I da PUC-MG, facilitando estudos, revisões e compartilhamento com colegas.
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)  
+![Disciplina](https://img.shields.io/badge/PUC%20Minas-Arquitetura%20de%20Computadores%20I-blue)  
+![Linguagens](https://img.shields.io/badge/Linguagens-C%20%7C%20Assembly%20%7C%20Verilog-green)  
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-lightgrey)  
 
-Alunos/Autores
-Kayky Gabriel Marques
 
-Professore Responsável
-Theldo Cruz Franqueira 
+# Arquitetura de Computadores I 📚💻
 
-PUC Minas
+🎯 **Objetivo**  
+Bem-vindo ao repositório da disciplina **Arquitetura de Computadores I** da PUC Minas.  
+Aqui você encontrará materiais, resumos, exercícios e códigos que abrangem o conteúdo estudado ao longo do semestre, facilitando a revisão e prática para provas e trabalhos.
 
-Como Usar
+---
 
-Clone este repositório.
+👨‍🎓 **Alunos / Autores**  
+- Kayky Gabriel Marques  
+---
 
-Organize os arquivos por tipo (guia de estudos, slides, resumos, etc.).
+👩‍🏫 **Professores Responsáveis**  
+- Theldo Cruz Franqueira  
 
-Utilize compartilhamento colaborativo (GitHub, Google Drive, etc.) para facilitar revisões em grupo.
+---
 
-Conteúdo / Tecnologias
+🛠️ **Tecnologias e Ferramentas Utilizadas**  
+- **Linguagens**: C, Assembly, Verilog  
+- **Ferramentas**: simuladores de arquitetura, editores de código, diagramadores  
+- **Extras**: esquemas de CPU, memória e barramentos  
 
-Slides, resumos, exercícios em C/Assembly/Verilog (conforme achado em repositórios relacionados como AC1 da PUC-MG) 
-GitHub
-+1
+---
 
-Linguagens típicas para prática: C, Assembly, Verilog.
+📋 **Temas Abordados na Disciplina**  
+- Fundamentos de CPU: arquitetura, funções e tipos (RISC / CISC)  
+- Unidade de Controle e Unidade Lógica e Aritmética (ULA)  
+- Hierarquia de Memória: registradores, cache, memória principal e secundária  
+- Sistemas de Entrada e Saída (E/S)  
+- Interconexão de Componentes: barramentos e protocolos de comunicação  
+- Ciclo de instrução e microarquitetura  
+- Noções de pipeline e execução paralela  
 
-Ferramentas complementares (se houver): simuladores, diagramas, quer visualização de pipelines, ALUs, memória.
+---
 
-Temas Abordados (sugestões com base no escopo geral da disciplina; ajuste conforme sua grade ou ementa)
+✨ **Funcionalidades do Repositório**  
 
-Fundamentos de CPU: arquitetura, funções, tipos (RISC/CISC)
+- Centralizar todo o material de estudo da disciplina  
+- Compartilhar resumos e códigos com outros alunos  
+- Facilitar a visualização de esquemas e arquiteturas  
+- Servir como base de estudos para provas e trabalhos  
 
-Memória principal e E/S: hierarquia, tipos, funcionamento
+---
 
-Interconexão entre componentes: barramentos, controle, comunicação 
-Wikipédia
+📌 **Informações da Disciplina**  
 
-Noções de microarquitetura e execução de instruções
+| Item           | Detalhe |
+|----------------|---------|
+| Carga Horária  | 80h |
+| Curso          | Ciência da Computação |
+| Período        | 2º |
+| Turno          | Manhã / Tarde |
+| Universidade   | PUC Minas |
 
-Eventualmente, tópicos como pipeline, memória cache, memória virtual, se contemplados na disciplina.
-
-Estrutura Sugerida do Repositório
+---
