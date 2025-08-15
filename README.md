@@ -1,4 +1,4 @@
-![GIF de Arquitetura de Computadores](https://cdnb.artstation.com/p/assets/images/images/035/754/567/large/augusto-0augusto-pixel-art-computer.gif?1613035326)
+![GIF de Arquitetura de Computadores](assets/computer.gif)
 
 ![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-yellow)  
 ![Disciplina](https://img.shields.io/badge/PUC%20Minas-Arquitetura%20de%20Computadores%20I-blue)  
