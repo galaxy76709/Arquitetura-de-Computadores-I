@@ -14,11 +14,11 @@ Aqui você encontrará materiais, resumos, exercícios e códigos que abrangem o
 
 ---
 
-👨‍🎓 **Alunos / Autores**  
+👨‍🎓 **Aluno / Autor**  
 - Kayky Gabriel Marques  
 ---
 
-👩‍🏫 **Professores Responsáveis**  
+👩‍🏫 **Professore Responsável**  
 - Theldo Cruz Franqueira  
 
 ---
