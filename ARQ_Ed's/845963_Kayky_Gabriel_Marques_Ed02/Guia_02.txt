@@ -115,7 +115,7 @@ Questao_01
  a.)   0,00111(2)  = X(10) 
 
 
-|  posição | bit | potência | valor decimal |
+|  posição | bit | potencia | valor decimal |
 | -------: | --: | -------: | ------------: |
 | 1ª (2⁻¹) |   0 |      1/2 |           0,5 |
 | 2ª (2⁻²) |   0 |      1/4 |          0,25 |
@@ -140,7 +140,7 @@ Resp: 0,21875
 b.)   0,01001 ( 2 )  = X ( 10 )
 
 
-|  posição | bit | potência | valor decimal |
+|  posição | bit | potencia | valor decimal |
 | -------: | --: | -------: | ------------: |
 | 1ª (2⁻¹) |   0 |      1/2 |           0,5 |
 | 2ª (2⁻²) |   1 |      1/4 |          0,25 |
@@ -162,7 +162,7 @@ Resp: 0,28215
 
 c.)   0,10101 ( 2 )  = X ( 10 )
 
-|  posição | bit | potência | valor decimal |
+|  posição | bit | potencia | valor decimal |
 | -------: | --: | -------: | ------------: |
 | 1ª (2⁻¹) |   1 |      1/2 |           0,5 |
 | 2ª (2⁻²) |   0 |      1/4 |          0,25 |
@@ -186,7 +186,7 @@ Resp: 0,65625
 
 d.)   1,11101(2)  = X(10) 
 
-|  posição | bit | potência | valor decimal |
+|  posição | bit | potencia | valor decimal |
 | -------: | --: | -------: | ------------: |
 | 1ª (2⁻¹) |   1 |      1/2 |           0,5 |
 | 2ª (2⁻²) |   1 |      1/4 |          0,25 |
@@ -210,7 +210,7 @@ Resp: 1,90625
 e.) 11,11001(2)  = X(10)
 
 |---------------|-------|------------------|-----|---------|
-| potência de 2 | valor | dá pra subtrair? | bit |   resto |
+| potencia de 2 | valor | dá pra subtrair? | bit |   resto |
 | ------------: | ----: | :--------------: | :-: | ------: |
 |            2¹ |     2 |        sim       |  1  | 3−2 = 1 |
 |            2⁰ |     1 |        sim       |  1  | 1−1 = 0 |
@@ -220,7 +220,7 @@ e.) 11,11001(2)  = X(10)
 Binario em inteiro : 3
 
 
-|  posição | bit | potência | valor decimal |
+|  posição | bit | potencia | valor decimal |
 | -------: | --: | -------: | ------------: |
 | 1ª (2⁻¹) |   1 |      1/2 |           0,5 |
 | 2ª (2⁻²) |   1 |      1/4 |          0,25 |
@@ -239,7 +239,7 @@ Binario em inteiro : 3
 Resp: 3,78125
 
 //----------------
-# Passo a passo: conversão de fração decimal para binário multiplicando por 2
+# Passo a passo: conversão de fração decimal para binario multiplicando por 2
 ---
 
 ### Passo 1 – Comece com a fração decimal
@@ -260,7 +260,7 @@ F * 2 = R
 
 ### **Passo 3 – Extrair o bit**
 
-* **Parte inteira de R** será o próximo **bit do binário**:
+* **Parte inteira de R** será o próximo **bit do binario**:
 
   * Se `R ≥ 1` → bit = 1
   * Se `R < 1` → bit = 0
@@ -279,9 +279,9 @@ F * 2 = R
 
 ---
 
-### **Passo 5 – Montar o número binário**
+### **Passo 5 – Montar o número binario**
 
-* Todos os bits extraídos **na ordem em que foram gerados** formam a **parte fracionária** do número binário.
+* Todos os bits extraídos **na ordem em que foram gerados** formam a **parte fracionária** do número binario.
 * Se o número tiver parte inteira, junte-a antes do ponto
 
 ### **Exemplo rápido: 0,875₁₀**
@@ -326,7 +326,7 @@ Resp: 1,01(2)
 c.)   3,750000 (10)     = X(2) 
 
 |---------------|-------|------------------|-----|---------|
-| potência de 2 | valor | dá pra subtrair? | bit |   resto |
+| potencia de 2 | valor | dá pra subtrair? | bit |   resto |
 | ------------: | ----: | :--------------: | :-: | ------: |
 |            2¹ |     2 |        sim       |  1  | 3−2 = 1 |
 |            2⁰ |     1 |        sim       |  1  | 1−1 = 0 |
@@ -350,7 +350,7 @@ Resp: 11,11(2)
 d.)   4,125000 (10)     = X(2)
 
 |---------------|-------|------------------|-----|---------|
-| potência de 2 | valor | dá pra subtrair? | bit |   resto |
+| potencia de 2 | valor | dá pra subtrair? | bit |   resto |
 | ------------: | ----: | :--------------: | :-: | ------: |
 |            2² |     4 |        sim       |  1  | 4−4 = 0 |
 |            2¹ |     2 |        nao       |  0  |       0 |
@@ -373,7 +373,7 @@ Resp: 100,001(2)
 e.)   7,625000 (10)    = X(2)
 
 |---------------|-------|------------------|-----|---------|
-| potência de 2 | valor | dá pra subtrair? | bit |   resto |
+| potencia de 2 | valor | dá pra subtrair? | bit |   resto |
 | ------------: | ----: | :--------------: | :-: | ------: |
 |            2² |     4 |        sim       |  1  | 7−4 = 3 |
 |            2¹ |     2 |        sim       |  1  | 3-2 = 1 |
@@ -424,8 +424,8 @@ Questao_03
 
 | Passo | Bits (base 2) | Agrupamento em quartetos | Dígito em base 16    |
 | ----- | ------------- | ------------------------ | -------------------  |
-| 1     | 100           | (1010)                   | 1*2³+0+1*2¹+0  = 10  |
-| 2     | 111           | (0100)                   | 1*2²           = 4   |
+| 1     | 1010          | (1010)                   | 1*2³+0+1*2¹+0  = 10  |
+| 2     | 0100          | (0100)                   | 1*2²           = 4   |
 
   Resp: 0,A4
 
@@ -440,4 +440,183 @@ Questao_03
   
   Resp 1,65 ( 8 )
 
+
+e.) 1011,1011(2)    = X(16)
+
+| Passo | Bits (base 2) | Agrupamento em quartetos | Dígito em base 16     |
+| ----- | ------------- | ------------------------ | -------------------   |
+| 1     | 1011          | (1011)                   | 1*2³+1*2¹+1*2⁰  = 11  |
+
+  parte_inteira = B
+
+| Passo | Bits (base 2) | Agrupamento em quartetos | Dígito em base 16     |
+| ----- | ------------- | ------------------------ | -------------------   |
+| 1     | 1011          | (1011)                   | 1*2³+1*2¹+1*2⁰  = 11  |
+
+  parte_fracionaria = B -> 11 (10)  
+
+    Resp: B,B ( 16 )
+
+
+//----------------
+
+  Questao_04
+
+  a.) 0,213(4)    = X(2) 
+
+| Passo | Dígito (4) | potencia de 4 | Bits correspondentes (2) | Observação         |
+| ----- | ---------- | ------------- | ------------------------ | ------------------ |
+| 1     | 2          | 4⁻¹           | 10                       | 2 × 4⁻¹ = 0,5      |
+| 2     | 1          | 4⁻²           | 01                       | 1 × 4⁻² = 0,0625   |
+| 3     | 3          | 4⁻³           | 11                       | 3 × 4⁻³ = 0,046875 |
+
+  Resp: 0,100111 ( 2 )
+
+---
+
+  b.) 0,4D3(16)  = X(4)
+
+| Passo | Dígito(16) | potencia de 16 | Bits correspondentes (2) | potencia de 4      |
+| ----- | ---------- | -------------  | ------------------------ | ------------------ |
+| 1     | 4          | 16⁻¹           | 01 00                    | 4(16) = 10(4)      |
+| 2     | D          | 16⁻²           | 11 01                    | D(16) = 31(4)      |
+| 3     | 3          | 16⁻³           | 00 11                    | 3(16) =  3(4)      |
+
+  Resp: 0,10313 ( 4 )
+
+
+
+
+ c.) 0,654(8)    = X ( 2 )
+
+| Passo | Dígito(8)  | potencia de  8 | Bits correspondentes (2) | potencia de 2      |
+| ----- | ---------- | -------------  | ------------------------ | ------------------ |
+| 1     | 6          |  8⁻¹           | 01 10                    | 6(16) = 110(2)     |
+| 2     | 5          |  8⁻²           | 01 01                    | 5(16) = 101(2)     |
+| 3     | 4          |  8⁻³           | 01 00                    | 4(16) = 100(2)     |
+
+ Resp: 0,110 101 100 ( 2 )
+
+---
+
+  d.) 6,1435(8)   = X(4) 
+
+| Passo | Dígito(8)  | potencia de 8  | Bits correspondentes (2) | potencia de 4      |
+| ----- | ---------- | -------------  | ------------------------ | ------------------ |
+| 1     | 4          |  8⁻¹           |   11 00                  | 6(8) = 30(4)       |
   
+  parte_inteira = 12( 4 )
+
+---
+
+| Passo | Dígito em base 8 | potencia de 8 | Representacao em binario (3 bits) | Agrupamento em base 4 (2 bits) | Resultado em base 4 |
+| ----- | ---------------- | ------------- | --------------------------------- | ------------------------------ | ------------------- |
+| 1     | 1                | 8⁻¹           | 001                               | 00 01                          | 1(4)                |
+| 2     | 4                | 8⁻²           | 100                               | 01 00                          | 10(4)               |
+| 3     | 3                | 8⁻³           | 011                               | 00 11                          | 3(4)                |
+| 4     | 5                | 8⁻⁴           | 101                               | 01 01                          | 11(4)               |
+
+  parte_fracionaria = 0,1435(8) ​ 0,110311(4)
+
+  Resp: 12,110311(4)
+
+---
+
+  e.) A,DE5(16)  = X(4) 
+
+| Passo | Dígito(16) | potencia de 8  | Bits correspondentes (2) | potencia de 4      |
+| ----- | ---------- | -------------  | ------------------------ | ------------------ |
+| 1     | A          |  16⁻¹          |  10 10                   | A(16) = 22(4)      |
+  
+  parte_inteira = 22( 4 )
+
+---
+
+| Passo | Digito em base 16| Potencia de 16| Representacao em binario (4 bits) | Agrupamento em base 4 (2 bits) | Resultado em base 4 |
+| ----- | ---------------- | ------------- | --------------------------------- | ------------------------------ | ------------------- |
+| 1     | D                | 16⁻¹          | 11 01                             | 31                             | 31(4)               |
+| 2     | E                | 16⁻²          | 11 10                             | 32                             | 32(4)               |
+| 3     | 5                | 16⁻³          | 01 01                             | 11                             | 11(4)               |
+
+  parte_fracionaria = 0,313211
+
+  Resp: A,DE5 ( 16 ​) = 22,313211 ( 4 ​)
+
+
+//----------------
+
+  Questao_05 
+
+  a.) 101,011(2)  + 10,01(2)    = X ( 2 ) 
+
+    101.011   (5.375 (10))
++   010.010   (2.250 (10))   <-- 10.01 (2) = 010.010(2)
+-----------
+    111.101
+
+---
+
+  b.) 1000,01(2)  - 10,011(2)    = X(2)
+
+   1000.010   (8.25(10))
+-  0010.011   (2.375(10))
+-----------
+   0101.111
+
+
+--- 
+
+  c.) 101,110(2)  * 10,011(2)   = X(2)
+
+1101101010₂  ->  1101.101010₂   (pois 874 / 2^6 = 13 + 42/64)
+
+// - Raciosioneo 
+
+5,75 × 2,375 = 13,65625
+
+5,75× 2,375 = 13,65625 ->  1101.101010 (2) = 13,65625
+
+1101.101010 (2) = 13,65625.
+
+---
+
+  d.) 10110,01(2)  / 11,101(2)  = X(2)
+
+10110.01 (2) = 10110 (2) + 0.01 (2) = 22 + 0.25 = 22.25 = 89/4.
+
+11.101(2) = 11(2) + 0.101(2) = 3 + 0.625 = 3.625 = 29/8
+
+  178 / 29 = 6 % 4
+
+  178 / 29 = 6 + 4/29
+
+  6(10) = 110(2)
+
+| Passo | Resto × 2 /29 | Parte inteira (bit) |    Novo resto (numerador)   |
+| :---: | :-----------: | :-----------------: | :-------------------------: |
+|   1   |      8/29     |          0          |              8              |
+|   2   |     16/29     |          0          |              16             |
+|   3   |     32/29     |          1          |              3              |
+|   4   |      6/29     |          0          |              6              |
+|   5   |     12/29     |          0          |              12             |
+|   6   |     24/29     |          0          |              24             |
+|   7   |     48/29     |          1          |              19             |
+|   8   |     38/29     |          1          |              9              |
+...
+
+---
+
+  e.) 1100101(2)  % 1101(2)   = X(2)
+
+   1100101 | 1101
+-  1101    |-------
+  -------  | 111   (Quociente)
+   011000
+  -  1101
+   ------
+     10111
+   -  1101
+   -------
+      1010   (Resto)
+
+// end
