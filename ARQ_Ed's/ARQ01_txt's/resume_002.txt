@@ -1,0 +1,108 @@
+---
+
+### **Resumo da Aula: Sistemas de Representação de Dados**
+
+**Disciplina:** Arquitetura de Computadores I (PUC-Minas - ICEI)
+
+Este resumo aborda os métodos fundamentais para a representação de dados em sistemas computacionais, 
+focando em números inteiros e fracionários, suas conversões entre bases e as operações aritméticas correspondentes.
+
+---
+
+#### **1. Orientações (Endianness)**
+
+A forma como os dados são organizados na memória é definida pela sua orientação (endianness).
+
+**Big-Endian:**
+O byte mais significativo é armazenado no endereço de memória mais baixo.
+É uma ordem mais intuitiva para a leitura de arranjos e texto (ex: "casa").
+
+**Little-Endian:**
+O byte menos significativo é armazenado no endereço de memória mais baixo.
+Esta ordem é mais eficiente para operações aritméticas.
+
+---
+
+#### **2. Conversão entre Bases por Agrupamento**
+
+A conversão de números binários para outras bases (Octal, Hexadecimal) é simplificada pelo agrupamento de bits.
+
+**Binário para Hexadecimal (Base 16):**
+Agrupam-se os bits de 4 em 4, da direita para a esquerda. Cada grupo corresponde a um dígito hexadecimal (0-9, A-F).
+
+Exemplo:
+`115 (10) = 0111 0011 (2) -> 73 (16)`
+
+**Binário para Octal (Base 8):**
+Agrupam-se os bits de 3 em 3. Cada grupo corresponde a um dígito octal (0-7).
+Exemplo:
+`115 (10) = 001 110 011 (2) -> 163 (8)`
+
+O processo inverso (desagrupamento) também é válido.
+
+---
+
+#### **3. Representação de Números Inteiros**
+
+**a) Inteiros Sem Sinal:**
+A representação é o valor binário direto do número. Zeros são adicionados à esquerda ("padding")
+para completar o número de bits.
+
+**b) Inteiros Com Sinal:**
+
+**Sinal e Amplitude:**
+O bit mais à esquerda (MSB) é usado para o sinal (0 para positivo, 1 para negativo) e os bits restantes para a magnitude.
+Problema: Gera duas representações para o zero (+0 e -0) e complica a aritmética.
+
+**Complemento de 2 (C2):**
+É o método padrão utilizado em computadores modernos.
+Vantagens: Possui uma representação única para o zero e simplifica a aritmética, tratando a subtração como uma soma.
+Intervalo para `n` bits: `[-(2^(n-1))]` até `[+(2^(n-1) - 1)]`.
+Cálculo: Para encontrar o negativo de um número, inverte-se todos os seus bits (Complemento de 1) e soma-se 1 ao resultado.
+
+Exemplo de C2 para -13 em 8 bits:
+1.  `+13 = 0000 1101`
+2.  Inverter bits (C1): `1111 0010`
+3.  Somar 1: `1111 0011` (Representação de -13)
+
+---
+
+#### **4. Representação de Números Fracionários (Ponto Fixo)**
+
+Nesta representação, um número é dividido em uma parte inteira e uma fracionária, com um ponto binário.
+
+**Conversão (Decimal para Binário):**
+
+**Parte Inteira:**
+Convertida através de divisões sucessivas por 2.
+
+**Parte Fracionária:**
+Convertida através de multiplicações sucessivas por 2. A parte inteira de cada resultado forma os dígitos binários.
+
+Exemplo para 0.75:
+`0.75 * 2 = 1.50` -> dígito `1`
+`0.50 * 2 = 1.00` -> dígito `1`
+Resultado: `0.11 (2)`
+
+**Final:**
+`13.75 (10) = 1101.11 (2)`
+
+---
+
+#### **5. Operações Aritméticas em Binário**
+
+**Alinhamento:**
+Para soma e subtração, os operandos devem ser alinhados pelo ponto binário.
+
+**Subtração com Complemento de 2:**
+A operação `A - B` é realizada como `A + C2(B)`. O "vai-um" (carry out) do bit de sinal é descartado.
+
+Exemplo: `13.75 - 6.625`
+1.  `+13.75 = 0 1101.110`
+2.  `+6.625 = 0 0110.101`
+3.  `C2 de +6.625 = 1 1001.011`
+4.  Soma: `0 1101.110 + 1 1001.011 = (1) 0 0111.001`
+5.  Resultado: `0 0111.001 (2)`, que é `+7.125 (10)`.
+
+**Multiplicação e Divisão:**
+Seguem lógicas análogas às operações em base 10, com o devido cuidado para posicionar o ponto binário no resultado.

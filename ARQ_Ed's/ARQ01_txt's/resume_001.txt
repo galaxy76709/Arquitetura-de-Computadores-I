@@ -1,0 +1,48 @@
+---
+
+### **Resumo da Aula: Apresentação da Disciplina e Conceitos Iniciais**
+
+**Disciplina:** Arquitetura de Computadores I (PUC-Minas - ICEI)
+
+Este resumo cobre os tópicos introdutórios da disciplina, incluindo o plano de ensino,
+ferramentas necessárias, sistemas de avaliação e os primeiros conceitos sobre representação de dados e sistemas de numeração.
+
+---
+
+#### **1. Conceitos Iniciais: Modelos e Representação de Dados**
+
+Um mesmo dado (representação) pode ter diferentes significados (interpretação) dependendo do contexto.
+Exemplo: a sequência de bits `01000001` representa o número inteiro `65`, mas é interpretada como o caractere `'A'` na tabela ASCII.
+
+---
+
+#### **2. Notações e Sistemas de Numeração**
+
+**Notação Posicional:**
+O valor de um dígito depende de sua posição no número.
+Exemplo Decimal: `13 (10)` é `1*10^1 + 3*10^0`.
+Exemplo Binário: `1101 (2)` é `1*2^3 + 1*2^2 + 0*2^1 + 1*2^0`, que resulta em `13 (10)`.
+
+**Orientações (Endianness):**
+Define a ordem em que os bytes são armazenados na memória.
+
+**Little-Endian:**
+O byte menos significativo vem primeiro. É o formato canônico para a representação de números,
+onde as potências crescem da direita para a esquerda.
+Ex: `1101`
+
+**Big-Endian:**
+O byte mais significativo vem primeiro. É mais intuitivo para a representação de arranjos de dados, como texto.
+Ex: `1011` (restos da divisão na ordem inversa)
+
+---
+
+#### **3. Conversão entre Bases**
+
+**Método de Divisões Sucessivas:**
+Para converter um número da base 10 para outra base, divide-se o número sucessivamente pela nova base e utilizam-se
+os restos em ordem inversa (para obter a representação *little-endian*).
+
+**Método Tabular (Comparações e Subtrações):**
+Um método alternativo, mais eficiente para implementação em hardware, que consiste em verificar
+se o número é maior ou igual às potências da base de destino, subtraindo quando possível.
