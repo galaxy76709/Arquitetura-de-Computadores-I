@@ -4,7 +4,7 @@
 
     Questao_01
 
-| Item | Operação           | Numero original  |Ajustado para n bits| Complemento de 1 (C1) | Complemento de 2 (C2) | Resultado Final |
+| Item | Operacao           | Numero original  |Ajustado para n bits| Complemento de 1 (C1) | Complemento de 2 (C2) | Resultado Final |
 | ---- | -----------------  | -----------------|--------------------| --------------------- | --------------------- | --------------- |
 | a)   | C1,6(1001₂)        | 1001₂   (4 bits) | 001001₂   (6 bits) | 110110₂               | –                     | 110110₂         |
 | b)   | C1,8(1101₂)        | 1101₂   (4 bits) | 00001101₂ (8 bits) | 11110010₂             | –                     | 11110010₂       |
