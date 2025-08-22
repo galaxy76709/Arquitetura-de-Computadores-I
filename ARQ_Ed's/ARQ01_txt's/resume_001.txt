@@ -4,8 +4,7 @@
 
 **Disciplina:** Arquitetura de Computadores I (PUC-Minas - ICEI)
 
-Este resumo cobre os tópicos introdutórios da disciplina, incluindo o plano de ensino,
-ferramentas necessárias, sistemas de avaliação e os primeiros conceitos sobre representação de dados e sistemas de numeração.
+Este resumo cobre os tópicos introdutórios da disciplina como os primeiros conceitos sobre representação de dados e sistemas de numeração.
 
 ---
 
