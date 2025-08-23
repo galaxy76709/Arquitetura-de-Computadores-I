@@ -69,29 +69,31 @@ public class Guia_03
   }
 
 
- /* 
-    Converter valor em certa base para binario em complemento de 1. 
-    @return complemento de 1 equivalente 
-    @param  length - tamanho 
-    @param  value  - valor em outra base 
-    @param  base   - base desse valor 
-  */ 
-  public static String C1 ( int length, String value, int base ) 
-  { 
-    return ( "0" ); 
-  } // end C1 ( ) 
- 
- /* 
-    Converter valor em certa base para binario em complemento de 2. 
-    @return complemento de 2 equivalente 
-    @param  length - tamanho 
-    @param  value  - valor em outra base 
-    @param  base   - base desse valor 
-  */ 
-  public static String C2 ( int length, String value, int base ) 
-  { 
-    return ( "0" ); 
-  } // end C2 ( ) 
+ // ---------------------- C1 / C2 em outras bases ----------------------
+
+  private static String toBinary ( int length, String value, int base )
+  {
+    int decimal = Integer.parseInt(value, base);
+    String bin = Integer.toBinaryString(decimal);
+
+    while (bin.length() < length)
+        bin = "0" + bin;
+
+    if (bin.length() > length)
+        bin = bin.substring(bin.length()-length);
+
+    return bin;
+  }
+
+  public static String C1 ( int length, String value, int base )
+  {
+    return C1(length, toBinary(length, value, base));
+  }
+
+  public static String C2 ( int length, String value, int base )
+  {
+    return C2(length, toBinary(length, value, base));
+  }
  
  /* 
     Converter valor binario com sinal para decimal. 
