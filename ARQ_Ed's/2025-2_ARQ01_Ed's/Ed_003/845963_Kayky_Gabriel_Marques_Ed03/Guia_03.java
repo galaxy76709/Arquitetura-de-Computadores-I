@@ -141,26 +141,6 @@ public class Guia_03
     }
   }
 
-  // ---------------------- NOVOS MÓDULOS (BYTE) ----------------------
-
-  /**
-   * Calcula o complemento de 1 de um valor em um byte (8 bits).
-   * @param value O valor decimal a ser convertido.
-   * @return Uma string de 8 bits representando o complemento de 1.
-   */
-  public static String C1_byte(int value) {
-      // Converte o inteiro para uma string binaria
-      String binaryString = Integer.toBinaryString(value);
-      
-      // Garante que a string tenha apenas os 8 bits de um byte
-      if (binaryString.length() > 8) {
-          binaryString = binaryString.substring(binaryString.length() - 8);
-      }
-      
-      // Reutiliza a função C1 original com o tamanho fixo de 8 bits
-      return C1(8, binaryString);
-  }
-
 
   // ---------------------- AVALIAÇÃO DE EXPRESSÕES ----------------------
 
@@ -188,6 +168,46 @@ public class Guia_03
     return Integer.toString(result, Math.max(base1, base2)).toUpperCase();
   }// end eval ( ) 
  
+
+
+  // ---------------------- NOVOS MÓDULOS (BYTE) ----------------------
+
+  /**
+   * Calcula o complemento de 1 de um valor em um byte (8 bits).
+   * @param value O valor decimal a ser convertido.
+   * @return Uma string de 8 bits representando o complemento de 1.
+   */
+  public static String C1_byte(int value) {
+      // Converte o inteiro para uma string binaria
+      String binaryString = Integer.toBinaryString(value);
+      
+      // Garante que a string tenha apenas os 8 bits de um byte
+      if (binaryString.length() > 8) {
+          binaryString = binaryString.substring(binaryString.length() - 8);
+      }
+      
+      // Reutiliza a função C1 original com o tamanho fixo de 8 bits
+      return C1(8, binaryString);
+  }
+
+  /**
+   * 07.) Calcula o complemento de 2 de um valor em um byte (8 bits).
+   * @param value O valor decimal a ser convertido.
+   * @return Uma string de 8 bits representando o complemento de 2.
+   */
+  public static String C2_byte(int value) {
+      // Converte o inteiro para uma string binaria
+      String binaryString = Integer.toBinaryString(value);
+
+      // Garante que a string tenha apenas os 8 bits de um byte
+      if (binaryString.length() > 8) {
+          binaryString = binaryString.substring(binaryString.length() - 8);
+      }
+      
+      // Reutiliza a função C2 original com o tamanho fixo de 8 bits
+      return C2(8, binaryString);
+  }
+
   // ---------------------- MAIN ----------------------
 
   public static void main ( String [ ] args )
@@ -235,6 +255,9 @@ public class Guia_03
      // 6. e 7. Testes dos novos modulos para byte
     test_equals ( C1_byte (  10 ), "11110101" ); // C1 de 00001010
     test_equals ( C1_byte ( -10 ), "00001001" ); // C1 de 11110110
+    test_equals ( C2_byte (  10 ), "11110110" ); // C2 de 10 -> representacao de -10
+    test_equals ( C2_byte ( -10 ), "00001010" ); // C2 de -10 -> representacao de 10
+    test_equals ( C2_byte (   0 ), "00000000" ); // C2 de 0 e' 0
     System.out.println          ( "6. errorTotalReportMsg  = "+test_report ( ) );
 
 
