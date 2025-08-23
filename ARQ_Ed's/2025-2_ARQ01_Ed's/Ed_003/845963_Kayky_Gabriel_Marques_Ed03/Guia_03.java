@@ -1,0 +1,161 @@
+/**
+    Arquitetura de Computadores I - Guia_03.java
+    999999 - Xxx Yyy Zzz
+*/
+public class Guia_03
+{
+  private static int errors = 0;
+
+  public static void test_equals ( Object x, Object y )
+  {
+     if ( (""+x).compareTo(""+y) != 0 )
+       errors = errors + 1;
+  }
+
+  public static String test_report  ( )
+  {
+     String result = ""+errors;
+    errors = 0; // Reinicia o contador para a proxima bateria de testes
+    return ( result );
+  }
+
+  // ---------------------- COMPLEMENTO DE 1 ----------------------
+
+  public static String C1 ( int length, String value )
+  {
+    // garantir comprimento
+    while (value.length() < length)
+        value = "0" + value;
+
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < length; i++)
+    {
+        char c = value.charAt(i);
+        sb.append( (c=='0') ? '1' : '0' );
+    }
+    return sb.toString();
+  }
+
+  /* 
+    Converter valor binario para o complemento de 2. 
+    @return complemento de 2 equivalente 
+    @param  length - tamanho 
+    @param  value  - valor binario 
+  */ 
+  public static String C2 ( int length, String value ) 
+  { 
+    return ( "0" ); 
+  } // end C2 ( ) 
+ 
+ /* 
+    Converter valor em certa base para binario em complemento de 1. 
+    @return complemento de 1 equivalente 
+    @param  length - tamanho 
+    @param  value  - valor em outra base 
+    @param  base   - base desse valor 
+  */ 
+  public static String C1 ( int length, String value, int base ) 
+  { 
+    return ( "0" ); 
+  } // end C1 ( ) 
+ 
+ /* 
+    Converter valor em certa base para binario em complemento de 2. 
+    @return complemento de 2 equivalente 
+    @param  length - tamanho 
+    @param  value  - valor em outra base 
+    @param  base   - base desse valor 
+  */ 
+  public static String C2 ( int length, String value, int base ) 
+  { 
+    return ( "0" ); 
+  } // end C2 ( ) 
+ 
+ /* 
+    Converter valor binario com sinal para decimal. 
+    @return decimal equivalente 
+    @param  value - valor binario 
+  */ 
+  public static String sbin2dec ( String value ) 
+  { 
+    return ( "0" ); 
+  } // end sbin2dec ( ) 
+ 
+ 
+
+ 
+ /* 
+    Operar (subtrair) valores em certa base. 
+    @return valor resultante da operacao 
+    @param  value1 - primeiro valor na base dada 
+    @param  op       - operacao ("-") 
+    @param  value2 - segundo  valor na base dada 
+    @param  base   - base para a conversao 
+  */ 
+  public static String eval ( String value1, String op, String value2, int base ) 
+  { 
+    return ( "0" ); 
+  } // end eval ( ) 
+ 
+ /* 
+    Operar valores em certas bases. 
+    @return valor resultante da operacao, se valida 
+    @param  value1 - primeiro valor 
+    @param  base1  - primeira base 
+    @param  op       - operacao 
+    @param  value2 - segundo  valor 
+    @param  base2  - segunda  base 
+  */ 
+  public static String evalB1B2 ( String value1, int base1, String op, String value2, int base2 ) 
+  { 
+    return ( "0" ); 
+  } // end evalB1B2 ( ) 
+
+  // ---------------------- MAIN ----------------------
+
+  public static void main ( String [ ] args )
+  {
+    System.out.println ( "Guia_03 - Java Tests   " );
+    System.out.println ( "  999999 - Xxx Yyy Zzz" );
+    System.out.println ( );
+
+    // Testes corrigidos para refletir os resultados corretos das funcoes
+    test_equals  ( C1         ( 6,        "1001"  ),  "110110" );
+    test_equals  ( C1         ( 8,        "1101"  ),  "11110010" );
+    test_equals  ( C2         ( 6,    "101011"  ),  "010101" );
+    test_equals  ( C2         ( 7,     "101101" ),  "1010011" );
+    test_equals  ( C2         ( 8,     "110010" ),  "11001110" );
+    System.out.println        ( "1. errorTotalReportMsg  = "+test_report ( ) );
+
+    test_equals  ( C1          ( 6, "231",    4 ),  "010010" );
+    test_equals  ( C1          ( 8,   "E7", 16 ),  "00011000" );
+    test_equals  ( C2          ( 6,  "132",   4 ),  "100010" );
+    test_equals  ( C2          ( 7,  "173",   8 ),  "0000101" );
+    test_equals  ( C2          ( 8,   "9F",  16 ),  "01100001" );
+    System.out.println         ( "2. errorTotalReportMsg  = "+test_report ( ) );
+
+    test_equals  ( sbin2dec (        "10011" ), "-13" );
+    test_equals  ( sbin2dec (      "110111" ), "-9" );
+    test_equals  ( sbin2dec (      "100101" ), "-27" );
+    test_equals  ( sbin2dec (    "1010011" ), "-45" );
+    test_equals  ( sbin2dec (    "1111011" ), "-5" );
+    System.out.println         ( "3. errorTotalReportMsg  = "+test_report ( ) );
+
+    test_equals  ( eval         (      "11001", "-",  "1111",  2 ), "1010" );
+    test_equals  ( eval         ( "1011000", "-", "1011",  2 ), "1001101" );
+    test_equals  ( eval         (          "231", "-",    "132",  4 ), "33" );
+    test_equals  ( eval         (          "654", "-",    "375",  8 ), "257" );
+    test_equals  ( eval         (         "8B7", "-",    "B13", 16 ), "-25C" );
+    System.out.println          ( "4. errorTotalReportMsg  = "+test_report ( ) );
+
+    test_equals  ( evalB1B2 (    "110101",   2, "-",        "1011",   2 ), "101010" );
+    test_equals  ( evalB1B2 ( "1011001",   2, "-",           "57",   8 ), "52" );
+    test_equals  ( evalB1B2 (         "312" ,   4, "-",            "5C", 16 ), "-26" );
+    test_equals  ( evalB1B2 (          "B2" ,  16, "-",  "1101101",   2 ), "45" );
+    test_equals  ( evalB1B2 (          "4F" ,  16, "-",            "6E", 16 ), "-1F" );
+    System.out.println          ( "5. errorTotalReportMsg  = "+test_report ( ) );
+
+    System.out.print ( "\n\nApertar ENTER para terminar." );
+    System.console ( ).readLine ( );
+  }
+}
