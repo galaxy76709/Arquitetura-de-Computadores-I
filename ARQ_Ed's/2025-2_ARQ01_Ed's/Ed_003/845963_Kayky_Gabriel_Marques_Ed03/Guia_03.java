@@ -142,33 +142,32 @@ public class Guia_03
   }
 
 
- /* 
-    Operar (subtrair) valores em certa base. 
-    @return valor resultante da operacao 
-    @param  value1 - primeiro valor na base dada 
-    @param  op       - operacao ("-") 
-    @param  value2 - segundo  valor na base dada 
-    @param  base   - base para a conversao 
-  */ 
-  public static String eval ( String value1, String op, String value2, int base ) 
-  { 
-    return ( "0" ); 
-  } // end eval ( ) 
- 
- /* 
-    Operar valores em certas bases. 
-    @return valor resultante da operacao, se valida 
-    @param  value1 - primeiro valor 
-    @param  base1  - primeira base 
-    @param  op       - operacao 
-    @param  value2 - segundo  valor 
-    @param  base2  - segunda  base 
-  */ 
-  public static String evalB1B2 ( String value1, int base1, String op, String value2, int base2 ) 
-  { 
-    return ( "0" ); 
-  } // end evalB1B2 ( ) 
+  // ---------------------- AVALIAÇÃO DE EXPRESSÕES ----------------------
 
+  public static String eval ( String value1, String op, String value2, int base )
+  {
+    int dec1 = Integer.parseInt(value1.replace(".",""), base);
+    int dec2 = Integer.parseInt(value2.replace(".",""), base);
+
+    int result = 0;
+    if (op.equals("-"))
+        result = dec1 - dec2;
+
+    return Integer.toString(result, base).toUpperCase();
+  }
+
+  public static String evalB1B2 ( String value1, int base1, String op, String value2, int base2 )
+  {
+    int dec1 = Integer.parseInt(value1.replace(",","").replace(".",""), base1);
+    int dec2 = Integer.parseInt(value2.replace(",","").replace(".",""), base2);
+
+    int result = 0;
+    if (op.equals("-"))
+        result = dec1 - dec2;
+
+    return Integer.toString(result, Math.max(base1, base2)).toUpperCase();
+  }// end eval ( ) 
+ 
   // ---------------------- MAIN ----------------------
 
   public static void main ( String [ ] args )
