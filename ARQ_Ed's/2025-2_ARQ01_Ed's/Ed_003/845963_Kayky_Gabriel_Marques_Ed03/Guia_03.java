@@ -95,19 +95,53 @@ public class Guia_03
     return C2(length, toBinary(length, value, base));
   }
  
- /* 
-    Converter valor binario com sinal para decimal. 
-    @return decimal equivalente 
-    @param  value - valor binario 
-  */ 
-  public static String sbin2dec ( String value ) 
-  { 
-    return ( "0" ); 
-  } // end sbin2dec ( ) 
- 
- 
 
- 
+  // ---------------------- BINÁRIO COM SINAL → DECIMAL ----------------------
+
+  public static String sbin2dec ( String value )
+  {
+    int length = value.length();
+    boolean negative = (value.charAt(0)=='1');
+
+    if (!negative)
+    {
+        return ""+Integer.parseInt(value, 2);
+    }
+    else
+    {
+        // CORREÇÃO: Para encontrar a magnitude de um número negativo em C2,
+        // devemos calcular o C2 dele novamente. A lógica original subtraía 1,
+        // o que é incorreto. A lógica correta é somar 1.
+        
+        // Inverter os bits (Complemento de 1)
+        String c1 = C1(length, value);
+
+        // Somar 1 (lógica do "carry", igual à usada no método C2)
+        char[] arr = c1.toCharArray();
+        boolean carry = true;
+        for (int i = length-1; i>=0; i--)
+        {
+            if (carry)
+            {
+                if (arr[i]=='0')
+                {
+                    arr[i] = '1';
+                    carry = false;
+                }
+                else
+                {
+                    arr[i] = '0';
+                    carry = true;
+                }
+            }
+        }
+
+        int magnitude = Integer.parseInt(new String(arr), 2);
+        return ""+(-magnitude);
+    }
+  }
+
+
  /* 
     Operar (subtrair) valores em certa base. 
     @return valor resultante da operacao 
