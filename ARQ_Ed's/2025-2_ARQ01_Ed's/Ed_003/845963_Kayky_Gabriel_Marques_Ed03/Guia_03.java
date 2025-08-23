@@ -36,17 +36,39 @@ public class Guia_03
     return sb.toString();
   }
 
-  /* 
-    Converter valor binario para o complemento de 2. 
-    @return complemento de 2 equivalente 
-    @param  length - tamanho 
-    @param  value  - valor binario 
-  */ 
-  public static String C2 ( int length, String value ) 
-  { 
-    return ( "0" ); 
-  } // end C2 ( ) 
- 
+// ---------------------- COMPLEMENTO DE 2 ----------------------
+
+  public static String C2 ( int length, String value )
+  {
+    // Garante que o valor tenha o comprimento correto antes de calcular C1
+    while (value.length() < length) {
+        value = "0" + value;
+    }
+    
+    String c1 = C1(length, value);
+    char[] bits = c1.toCharArray();
+    boolean carry = true;
+
+    for (int i = length-1; i >= 0; i--)
+    {
+        if (carry)
+        {
+            if (bits[i]=='0')
+            {
+                bits[i] = '1';
+                carry = false;
+            }
+            else
+            {
+                bits[i] = '0';
+                carry = true;
+            }
+        }
+    }
+    return new String(bits);
+  }
+
+
  /* 
     Converter valor em certa base para binario em complemento de 1. 
     @return complemento de 1 equivalente 
