@@ -141,6 +141,26 @@ public class Guia_03
     }
   }
 
+  // ---------------------- NOVOS MÓDULOS (BYTE) ----------------------
+
+  /**
+   * Calcula o complemento de 1 de um valor em um byte (8 bits).
+   * @param value O valor decimal a ser convertido.
+   * @return Uma string de 8 bits representando o complemento de 1.
+   */
+  public static String C1_byte(int value) {
+      // Converte o inteiro para uma string binaria
+      String binaryString = Integer.toBinaryString(value);
+      
+      // Garante que a string tenha apenas os 8 bits de um byte
+      if (binaryString.length() > 8) {
+          binaryString = binaryString.substring(binaryString.length() - 8);
+      }
+      
+      // Reutiliza a função C1 original com o tamanho fixo de 8 bits
+      return C1(8, binaryString);
+  }
+
 
   // ---------------------- AVALIAÇÃO DE EXPRESSÕES ----------------------
 
@@ -211,6 +231,12 @@ public class Guia_03
     test_equals  ( evalB1B2 (          "B2" ,  16, "-",  "1101101",   2 ), "45" );
     test_equals  ( evalB1B2 (          "4F" ,  16, "-",            "6E", 16 ), "-1F" );
     System.out.println          ( "5. errorTotalReportMsg  = "+test_report ( ) );
+
+     // 6. e 7. Testes dos novos modulos para byte
+    test_equals ( C1_byte (  10 ), "11110101" ); // C1 de 00001010
+    test_equals ( C1_byte ( -10 ), "00001001" ); // C1 de 11110110
+    System.out.println          ( "6. errorTotalReportMsg  = "+test_report ( ) );
+
 
     System.out.print ( "\n\nApertar ENTER para terminar." );
     System.console ( ).readLine ( );
