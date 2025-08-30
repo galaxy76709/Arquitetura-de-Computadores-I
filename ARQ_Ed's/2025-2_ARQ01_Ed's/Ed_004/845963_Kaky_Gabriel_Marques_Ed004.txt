@@ -390,3 +390,24 @@ PoS = IIM ( 1 , 2 , 4 , 6 , 8 , 10 , 14 )
  15 | 1 1 1 1 | (x' + y' + w' + z')           | 0
 
 PoS = IIM ( 0, 1 , 2 , 3 , 5 , 11 , 15 )
+
+//---------------
+
+
+ Questao_05
+
+ a.) Funcao de 2 entradas
+
+    n	x	y	f(x,y)
+    0	0	0	0
+    1	0	1	0
+    2	1	0	1
+    3	1	1	0
+
+SoP Simplificada: 
+f = x ⋅ y​
+
+PoS Simplificada:
+f = ( x + y ) ⋅ ( x + y​') ⋅ ( x' + y' ​)
+
+
