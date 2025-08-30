@@ -456,7 +456,7 @@ SoP Simplificada: f = (x . z') + (y' . z) + (y . z')
 PoS Simplificada: f = (x+y+z) . (x+y'+z') . (x'+y'+z')
 //---------------
 
-e) Função de 4 entradas
+e) Funcao de 4 entradas
 
 n	x	y	w	z	f(x,y,w,z)
 0	0	0	0	0	1
