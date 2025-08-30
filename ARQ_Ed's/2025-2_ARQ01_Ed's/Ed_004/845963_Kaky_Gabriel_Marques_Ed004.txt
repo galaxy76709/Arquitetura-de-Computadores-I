@@ -100,7 +100,7 @@ f = x′ . y
 
 //---------------
 
-b.) (x + y) + (x'·y)
+b.) (x + y) + (x'. y)
 
 Pela absorcao:
 
@@ -109,3 +109,25 @@ Pela absorcao:
 
 Simplificado:
  f = x + y
+
+//---------------
+c.) (x'. y)'. (x + y)
+
+De Morgan no primeiro termo:
+
+ ( x′ . y )′ = ( x′ )′ + y′ = x + y′
+
+Substituindo:
+
+ ( x + y′ ) . ( x + y )
+
+Usando distributiva:
+
+ = x + ( y′ . y )
+ = x + 0 
+ = x
+
+
+Simplificado:
+
+ f = x
