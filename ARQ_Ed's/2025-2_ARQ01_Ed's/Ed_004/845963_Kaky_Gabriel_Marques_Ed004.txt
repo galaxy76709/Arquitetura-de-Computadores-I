@@ -410,4 +410,18 @@ f = x ⋅ y​
 PoS Simplificada:
 f = ( x + y ) ⋅ ( x + y​') ⋅ ( x' + y' ​)
 
+//---------------
 
+b) Funcao de 2 entradas
+
+n	x	y	f(x,y)
+0	0	0	0
+1	0	1	1
+2	1	0	0
+3	1	1	1
+
+SoP Simplificada: 
+f= y
+
+PoS Simplificada:
+f= y
