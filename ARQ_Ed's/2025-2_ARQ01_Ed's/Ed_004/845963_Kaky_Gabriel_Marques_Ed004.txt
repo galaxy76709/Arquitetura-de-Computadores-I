@@ -425,3 +425,25 @@ f= y
 
 PoS Simplificada:
 f= y
+
+//---------------
+
+c) Funcao de 3 entradas
+
+n	x	y	z	f(x,y,z)
+0	0	0	0	1
+1	0	0	1	0
+2	0	1	0	1
+3	0	1	1	0
+4	1	0	0	0
+5	1	0	1	1
+6	1	1	0	0
+7	1	1	1	1
+
+SoP Simplificada: 
+f=( x ⋅ z ) + ( x ⋅ z )
+
+PoS Simplificada:
+f=( x + z ) ⋅ ( x + z )
+
+//---------------
