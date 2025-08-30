@@ -111,6 +111,7 @@ Simplificado:
  f = x + y
 
 //---------------
+
 c.) (x'. y)'. (x + y)
 
 De Morgan no primeiro termo:
@@ -131,3 +132,22 @@ Usando distributiva:
 Simplificado:
 
  f = x
+
+//---------------
+
+ d.) ( x . y' )' + (x + y)
+
+De Morgan no primeiro termo:
+ (x . y′)′= x′ + ( y′ )′ = x′ + y
+
+Substituindo:
+
+ (x′ + y ) + ( x + y )
+
+Absorcao:
+
+(x′ + y ) + x = 1 + y = 1
+
+ Simplificado:
+
+f = 1
