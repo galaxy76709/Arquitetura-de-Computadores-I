@@ -151,3 +151,24 @@ Absorcao:
  Simplificado:
 
 f = 1
+
+//---------------
+
+e.) (y' + x') . (x + y)
+
+Distribuindo (propriedade distributiva):
+
+ ( y′ + x′ ) . ( x + y )
+= ( y′ . ( x + y ) ) + ( x′. ( x + y ) )
+
+Expandindo:
+
+= ( y′ . x + y′ . y ) + ( x′ . x + x′ . y )
+
+Simplificando:
+
+= ( y′ . x + 0 ) + ( 0 + x′. y )
+
+Simplificado:
+
+ f = x . y′ + x′ . y ( XOR )
