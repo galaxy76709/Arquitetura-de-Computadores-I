@@ -22,3 +22,4 @@ endmodule
 module Guia_04Q2e (output s, input x, y);
     assign s = (x & ~y) | (~x & y); // XOR
 endmodule
+    
