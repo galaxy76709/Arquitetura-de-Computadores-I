@@ -1,3 +1,5 @@
+    Questao_01
+
 01.) Construir a tabela-verdade para as proposições 
 e verificar pelas respectivas tabelas-verdades implementadas em Verilog e pelo Logisim
 
@@ -70,3 +72,27 @@ e) ( x' + y ) · ( y' + z')'
  6  1 1 0 |  0 | 1 |  0 |  1 |   1   |     0     |   1  |        0
  7  1 1 1 |  0 | 1 |  0 |  0 |   0   |     1     |   1  |        1
 SoP (3, 7)
+
+
+    Questao_02
+
+a.) x' · (x + y')'
+
+Aplicando De Morgan:
+
+( x + y′ )′ = x′ . ( y′ )′= x′ . y
+
+( x + y′)′ = x′ . ( y′ )′= x′. y
+
+Substituindo:
+
+x′. (x′. y) = x′. y
+
+x′ . (x′ . y) = x′ . y
+
+
+Simplificado:
+
+f = x′. y
+
+f = x′ . y
